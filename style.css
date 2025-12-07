@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f7;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* SABİT BUTONLAR */
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.float-btn {
+    padding: 10px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp-btn {
+    background: #25D366;
+}
+
+.call-btn {
+    background: #e63946;
+}
+
+/* HEADER */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.menu a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.vale-strip {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    background: #111827;
+    color: #f9fafb;
+    padding: 6px 0;
+}
+
+/* HERO FULL EKRAN */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 420px;
+    background-image: url('hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(100deg, rgba(15,23,42,0.9), rgba(15,23,42,0.3));
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: #fff;
+    max-width: 520px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 16px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: #f97316;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.hero-note {
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+/* SECTIONS */
+.section {
+    padding: 40px 0;
+}
+
+.section-gray {
+    background: #f3f4f6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 28px;
+}
+
+/* KAMPANYA SLIDER */
+.campaigns {
+    background: #fff;
+}
+
+.campaign-slider {
+    width: 100%;
+}
+
+.campaign-slider .swiper-slide img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+/* POPÜLER ŞEHİRLER */
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.city-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.city-card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.city-info {
+    padding: 12px 14px 14px;
+}
+
+.city-info h3 {
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.city-info p {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.city-btn {
+    padding: 7px 12px;
+    border-radius: 999px;
+    border: none;
+    background: #111827;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* REZERVASYON FORMU */
+.section-res {
+    background: #fff;
+}
+
+.res-form {
+    background: #f3f4f6;
+    border-radius: 16px;
+    padding: 14px 16px;
+}
+
+.res-row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.res-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    opacity: 0.8;
+}
+
+.res-group select,
+.res-group input {
+    width: 100%;
+    padding: 7px 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #111827;
+    font-size: 13px;
+}
+
+.res-group-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 10px;
+    border: none;
+    background: #f97316;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.res-note {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #4b5563;
+}
+
+.rez-summary {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #111827;
+}
+
+.rez-summary .grand-total {
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+/* ARAÇ FİLOSU */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.car-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.car-card h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.car-features {
+    list-style: disc;
+    padding-left: 18px;
+    font-size: 12px;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+
+.price-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.price-box {
+    border-radius: 10px;
+    padding: 8px 9px;
+    font-size: 12px;
+}
+
+.price-box span {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.price-box strong {
+    font-size: 14px;
+}
+
+.price-box.office {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.price-box.online {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.deposit {
+    font-size: 12px;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.vale-note {
+    font-size: 12px;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+/* Sınırsız KM rozeti */
+.km-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #f97316;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249,115,22,0.6); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 8px rgba(249,115,22,0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249,115,22,0); }
+}
+
+/* Kart altı butonlar */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card-btn {
+    flex: 1;
+    border: none;
+    border-radius: 999px;
+    padding: 7px 8px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.card-btn.call-card {
+    background: #f97316;
+    color: #fff;
+}
+
+.card-btn.wa-card {
+    background: #22c55e;
+    color: #fff;
+}
+
+/* KVKK & İLETİŞİM */
+.kvkk-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    background: #111827;
+    color: #e5e7eb;
+    padding: 24px 0 10px;
+    margin-top: 20px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #374151;
+}
+
+.footer-inner h3 {
+    margin-bottom: 6px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .res-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        margin-top: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .res-row {
+        grid-template-columns: 1fr;
+    }
+
+    .campaign-slider .swiper-slide img {
+        height: 220px;
+    }
+
+    .floating-buttons {
+        right: 12px;
+        bottom: 12px;
+    }
+}
