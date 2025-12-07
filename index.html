@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>GarentCars - Araç Kiralama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <!-- Sabit WhatsApp & Ara Butonları -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/905546448275?text=Merhaba! Araç mı lazım? Size nasıl yardımcı olabilirim?" target="_blank" class="float-btn whatsapp-btn">
+            WhatsApp
+        </a>
+        <a href="tel:05546448275" class="float-btn call-btn">
+            Hemen Ara
+        </a>
+    </div>
+
+    <!-- ÜST MENÜ -->
+    <header class="header">
+        <div class="container nav">
+            <div class="logo">Garent<span>Cars</span></div>
+            <nav class="menu">
+                <a href="#hero">Ana Sayfa</a>
+                <a href="#cars">Araçlar</a>
+                <a href="#popular-cities">Popüler Şehirler</a>
+                <a href="#rezervasyon">Rezervasyon</a>
+                <a href="#kvkk">KVKK</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+        </div>
+        <div class="vale-strip">
+            Türkiye'nin 81 ilinde <strong>Ücretsiz Vale Hizmeti</strong> ve 7/24 Yol Yardım ile yanınızdayız.
+        </div>
+    </header>
+
+    <!-- HERO (FULL EKRAN GÖRSEL) -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1>Ücretsiz Vale Hizmeti ile Araç Kiralama</h1>
+                <p>81 ilde kapınıza teslim, online özel fiyatlar ve geniş araç filosu ile GarentCars daima yanınızda.</p>
+                <a href="#cars" class="hero-btn">Araçlara Göz At</a>
+                <p class="hero-note">Ücretsiz vale hizmeti tüm online rezervasyonlarda geçerlidir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KAMPANYALAR SLIDER (R-1 - R-8) -->
+    <section class="section campaigns">
+        <div class="container">
+            <h2 class="section-title">Güncel Kampanyalar</h2>
+        </div>
+        <div class="campaign-slider swiper campaignsSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="r-1.png" alt="Kampanya 1"></div>
+                <div class="swiper-slide"><img src="r-2.png" alt="Kampanya 2"></div>
+                <div class="swiper-slide"><img src="r-3.png" alt="Kampanya 3"></div>
+                <div class="swiper-slide"><img src="r-4.png" alt="Kampanya 4"></div>
+                <div class="swiper-slide"><img src="r-5.png" alt="Kampanya 5"></div>
+                <div class="swiper-slide"><img src="r-6.png" alt="Kampanya 6"></div>
+                <div class="swiper-slide"><img src="r-7.png" alt="Kampanya 7"></div>
+                <div class="swiper-slide"><img src="r-8.png" alt="Kampanya 8"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- POPÜLER ŞEHİRLER -->
+    <section id="popular-cities" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Popüler Şehirler</h2>
+            <p class="section-subtitle">İstanbul, Ankara, İzmir ve Bursa'da ücretsiz vale ile aracınız kapınıza geliyor.</p>
+
+            <div class="city-grid">
+                <div class="city-card">
+                    <img src="istanbul.jpg" alt="İstanbul">
+                    <div class="city-info">
+                        <h3>İstanbul</h3>
+                        <p>Havalimanı &amp; şehir içi vale teslimat.</p>
+                        <button class="city-btn" onclick="location.href='#cars'">İstanbul Araçlarını Gör</button>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <img src="ankara.jpg" alt="Ankara">
+                    <div class="city-info">
+                        <h3>Ankara</h3>
+                        <p>Ofis ve otel önüne ücretsiz vale.</p>
+                        <button class="city-btn" onclick="location.href='#cars'">Ankara Araçlarını Gör</button>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <img src="izmir.jpg" alt="İzmir">
+                    <div class="city-info">
+                        <h3>İzmir</h3>
+                        <p>Adnan Menderes ve ilçe teslim.</p>
+                        <button class="city-btn" onclick="location.href='#cars'">İzmir Araçlarını Gör</button>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <img src="bursa.jpg" alt="Bursa">
+                    <div class="city-info">
+                        <h3>Bursa</h3>
+                        <p>Şehir merkezi ve otogar vale hizmeti.</p>
+                        <button class="city-btn" onclick="location.href='#cars'">Bursa Araçlarını Gör</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REZERVASYON BÖLÜMÜ -->
+    <section id="rezervasyon" class="section section-res">
+        <div class="container">
+            <h2 class="section-title">Online Rezervasyon</h2>
+            <p class="section-subtitle">Ücretsiz vale ve online özel fiyatlar için formu doldurun.</p>
+
+            <form id="rez-form" class="res-form res-form-bottom">
+                <div class="res-row">
+                    <div class="res-group">
+                        <label>Araç Seçiniz</label>
+                        <select id="res-car">
+                            <option value="">Araç seçin</option>
+                            <option value="tucson">Hyundai Tucson</option>
+                            <option value="wvgolf">Volkswagen Golf</option>
+                            <option value="cupra">Seat Leon Cupra</option>
+                            <option value="a3">Audi A3</option>
+                            <option value="bmw320">BMW 3.20</option>
+                            <option value="bmw520">BMW 5.20</option>
+                            <option value="c4kaktus">Citroën C4 Kaktüs</option>
+                            <option value="caravelle">Volkswagen Caravelle</option>
+                            <option value="civic">Honda Civic</option>
+                            <option value="corolla">Toyota Corolla</option>
+                            <option value="fabia">Skoda Fabia</option>
+                            <option value="fiategea">Fiat Egea</option>
+                            <option value="fordfocus">Ford Focus</option>
+                            <option value="fordpuma">Ford Puma</option>
+                            <option value="hyundaii20">Hyundai i20</option>
+                            <option value="megane">Renault Megane</option>
+                            <option value="mercedese200">Mercedes E 200</option>
+                            <option value="peugeot407">Peugeot 407</option>
+                            <option value="proacecity">Toyota Proace City</option>
+                            <option value="renaultclio">Renault Clio</option>
+                            <option value="skodasuperb">Skoda Superb</option>
+                            <option value="passat">Volkswagen Passat</option>
+                            <option value="rangerover">Range Rover</option>
+                            <option value="porschetaycan">Porsche Taycan</option>
+                        </select>
+                    </div>
+                    <div class="res-group">
+                        <label>Alış İli</label>
+                        <select id="res-pickup"></select>
+                    </div>
+                    <div class="res-group">
+                        <label>Teslim İli</label>
+                        <select id="res-dropoff"></select>
+                    </div>
+                    <div class="res-group">
+                        <label>Gün Sayısı</label>
+                        <input type="number" id="res-days" min="1" placeholder="Gün sayısı">
+                    </div>
+                    <div class="res-group res-group-button">
+                        <label>&nbsp;</label>
+                        <button type="submit" class="btn-primary">Rezervasyon Yap</button>
+                    </div>
+                </div>
+                <p class="res-note">Tüm online rezervasyonlarda ücretsiz vale hizmeti ve sınırsız kilometre dahildir.</p>
+                <div id="rez-summary" class="rez-summary"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ARAÇ FİLOSU -->
+    <section id="cars" class="section">
+        <div class="container">
+            <h2 class="section-title">Araç Filomuz</h2>
+            <p class="section-subtitle">Tüm araçlarımızda otomatik vites, ücretsiz vale hizmeti ve sınırsız kilometre mevcuttur.</p>
+
+            <div class="cars-grid">
+
+                <!-- Her kartta sınırsız km rozeti, özellikler, fiyatlar, butonlar -->
+
+                <div class="car-card" data-car-id="tucson">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="tucson.png" alt="Hyundai Tucson">
+                    <h3>Hyundai Tucson</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.050</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.500</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Ücretsiz vale ile kapınıza teslim.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="wvgolf">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="wvgolf.png" alt="Volkswagen Golf">
+                    <h3>Volkswagen Golf</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.300</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.750</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Ücretsiz vale ile otel veya ofis teslim.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="cupra">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="cupra.png" alt="Seat Leon Cupra">
+                    <h3>Seat Leon Cupra</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.350</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.750</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Performans odaklı sürüş, vale ile adresinize teslim.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="a3">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="a3.png" alt="Audi A3">
+                    <h3>Audi A3</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.300</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.750</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Şehir içi konfor ve ücretsiz vale hizmeti.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="bmw320">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="bmw320.png" alt="BMW 3.20">
+                    <h3>BMW 3.20</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺3.750</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺2.800</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺10.000</strong></p>
+                    <p class="vale-note">Ücretsiz vale ile iş veya tatilinizde konfor.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="bmw520">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="bmw520.png" alt="BMW 5.20">
+                    <h3>BMW 5.20</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺3.975</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺3.000</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺10.000</strong></p>
+                    <p class="vale-note">Ücretsiz vale ile havaalanından çıkınca aracınız hazır.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="c4kaktus">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="c4kaktüs.png" alt="Citroën C4 Kaktüs">
+                    <h3>Citroën C4 Kaktüs</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.650</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.750</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺10.000</strong></p>
+                    <p class="vale-note">Şehir içi stil sahibi, vale ile teslim.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="caravelle">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="caravelle.png" alt="VW Caravelle">
+                    <h3>Volkswagen Caravelle</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺4.080</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺3.250</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Kalabalık gruplar için ideal, ücretsiz vale hizmetiyle kapınızda.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="civic">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="civic.png" alt="Honda Civic">
+                    <h3>Honda Civic</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.250</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.500</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Konforlu sürüş, vale hizmeti ile birleşiyor.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="corolla">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="corolla.png" alt="Toyota Corolla">
+                    <h3>Toyota Corolla</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.300</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.500</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Şehir içi ve uzun yol için konforlu tercih.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="fabia">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="fabia.png" alt="Skoda Fabia">
+                    <h3>Skoda Fabia</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.300</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.500</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Şehir içi kullanım için ideal, vale dahil.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="fiategea">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="fiategea.png" alt="Fiat Egea">
+                    <h3>Fiat Egea</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.300</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.500</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Uygun fiyatlı, vale hizmetiyle çok pratik.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="fordfocus">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="fordfocus.png" alt="Ford Focus">
+                    <h3>Ford Focus</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.650</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.800</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Konforlu sürüş, vale ile adres teslim.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="fordpuma">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="fordpuma.png" alt="Ford Puma">
+                    <h3>Ford Puma</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.650</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.800</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Sportif SUV, ücretsiz vale ile kapınızda.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="hyundaii20">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="hyundaii20.png" alt="Hyundai i20">
+                    <h3>Hyundai i20</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.100</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.250</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Şehir içi pratik kullanım, vale teslimatı ile.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="megane">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="megane.png" alt="Renault Megane">
+                    <h3>Renault Megane</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.350</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.500</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Konforlu uzun yol performansı, vale avantajı.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="mercedese200">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="mercedese200.png" alt="Mercedes E 200">
+                    <h3>Mercedes E 200</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺3.800</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺2.850</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺10.000</strong></p>
+                    <p class="vale-note">Şoförlü veya şoförsüz kiralamada vale avantajı.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="peugeot407">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="peugeot407.png" alt="Peugeot 407">
+                    <h3>Peugeot 407</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.650</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.750</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Konforlu sürüş, ücretsiz vale ile birleşiyor.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="proacecity">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="proacecity.png" alt="Toyota Proace City">
+                    <h3>Toyota Proace City</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.850</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺2.000</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">İşiniz için pratik çözüm, vale ile adresinize teslim.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="renaultclio">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="renaultclio.png" alt="Renault Clio">
+                    <h3>Renault Clio</h3>
+                    <ul class="car-features">
+                        <li>Benzin</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.350</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.500</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Şehir içi kullanım için ekonomik çözüm, vale dahil.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="skodasuperb">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="skodasuperb.png" alt="Skoda Superb">
+                    <h3>Skoda Superb</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.650</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺1.750</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Aile ve iş seyahatleri için geniş iç hacim.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="passat">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="passat.png" alt="Volkswagen Passat">
+                    <h3>Volkswagen Passat</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺2.850</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺2.000</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺5.000</strong></p>
+                    <p class="vale-note">Uzun yol ve şirket kullanımı için ideal.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="rangerover">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="rangerover.png" alt="Range Rover">
+                    <h3>Range Rover</h3>
+                    <ul class="car-features">
+                        <li>Dizel</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺7.750</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺6.000</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺10.000</strong></p>
+                    <p class="vale-note">VIP kullanım ve özel günler için lüks tercih.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-car-id="porschetaycan">
+                    <div class="km-badge">Sınırsız KM</div>
+                    <img src="porche-taycan.png" alt="Porsche Taycan">
+                    <h3>Porsche Taycan</h3>
+                    <ul class="car-features">
+                        <li>Elektrikli</li>
+                        <li>Otomatik</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-box office">
+                            <span>Ofis Teslim</span>
+                            <strong>₺14.000</strong>
+                        </div>
+                        <div class="price-box online">
+                            <span>Online</span>
+                            <strong>₺10.000</strong>
+                        </div>
+                    </div>
+                    <p class="deposit">Depozito: <strong>₺15.000</strong></p>
+                    <p class="vale-note">Elektrikli performans, vale ile kapınızda.</p>
+                    <div class="card-actions">
+                        <button class="card-btn call-card">Hemen Ara</button>
+                        <button class="card-btn wa-card">WhatsApp</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KVKK BÖLÜMÜ -->
+    <section id="kvkk" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">KVKK Aydınlatma Metni</h2>
+            <p class="section-subtitle">
+                6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında kişisel verileriniz, GarentCars tarafından
+                sadece araç kiralama hizmetinin sunulması, rezervasyon işlemlerinizin yürütülmesi ve yasal yükümlülüklerin
+                yerine getirilmesi amacıyla işlenmektedir.
+            </p>
+            <p class="kvkk-text">
+                Kişisel verileriniz; açık rızanız, sözleşmenin kurulması ve ifası, veri sorumlusunun hukuki yükümlülüğünü
+                yerine getirmesi veya meşru menfaatleri kapsamında, yalnızca gerekli olduğu ölçüde işlenir ve saklanır.
+                Haklarınız ve detaylı bilgi için bizimle iletişime geçebilirsiniz.
+            </p>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM BÖLÜMÜ -->
+    <section id="iletisim" class="section">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="section-subtitle">
+                GarentCars ile iletişime geçmek için sağ alttaki <strong>Hemen Ara</strong> veya <strong>WhatsApp</strong> butonlarını kullanabilirsiniz.
+            </p>
+            <p class="kvkk-text">
+                Rezervasyon, fiyat bilgisi, filo kiralama ve diğer tüm sorularınız için 7/24 bize ulaşabilirsiniz.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                <h3>GarentCars</h3>
+                <p>Türkiye genelinde 81 ilde araç kiralama, ücretsiz vale ve 7/24 yol yardımı.</p>
+            </div>
+            <div class="footer-contact">
+                <p>İletişim için sağ alttaki butonları kullanın.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 GarentCars. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Kampanya slider
+        var campaignsSwiper = new Swiper('.campaignsSwiper', {
+            loop: true,
+            autoplay: { delay: 2500 },
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: '.campaignsSwiper .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.campaignsSwiper .swiper-button-next',
+                prevEl: '.campaignsSwiper .swiper-button-prev',
+            },
+        });
+
+        // 81 il listesi
+        const cities = [
+            "Adana","Adıyaman","Afyonkarahisar","Ağrı","Amasya","Ankara","Antalya","Artvin","Aydın",
+            "Balıkesir","Bilecik","Bingöl","Bitlis","Bolu","Burdur","Bursa","Çanakkale","Çankırı",
+            "Çorum","Denizli","Diyarbakır","Edirne","Elazığ","Erzincan","Erzurum","Eskişehir",
+            "Gaziantep","Giresun","Gümüşhane","Hakkari","Hatay","Isparta","Mersin","İstanbul",
+            "İzmir","Kars","Kastamonu","Kayseri","Kırklareli","Kırşehir","Kocaeli","Konya",
+            "Kütahya","Malatya","Manisa","Kahramanmaraş","Mardin","Muğla","Muş","Nevşehir",
+            "Niğde","Ordu","Rize","Sakarya","Samsun","Siirt","Sinop","Sivas","Tekirdağ",
+            "Tokat","Trabzon","Tunceli","Şanlıurfa","Uşak","Van","Yozgat","Zonguldak",
+            "Aksaray","Bayburt","Karaman","Kırıkkale","Batman","Şırnak","Bartın","Ardahan",
+            "Iğdır","Yalova","Karabük","Kilis","Osmaniye","Düzce"
+        ];
+
+        const pickupSelect = document.getElementById('res-pickup');
+        const dropoffSelect = document.getElementById('res-dropoff');
+
+        function fillCitySelect(selectEl) {
+            selectEl.innerHTML = '<option value="">İl seçin</option>';
+            cities.forEach(function(city) {
+                const opt = document.createElement('option');
+                opt.value = city;
+                opt.textContent = city;
+                selectEl.appendChild(opt);
+            });
+        }
+
+        fillCitySelect(pickupSelect);
+        fillCitySelect(dropoffSelect);
+
+        // Araç fiyat ve depozito bilgileri
+        const carData = {
+            tucson:        { name: "Hyundai Tucson",      online: 1500, office: 2050, depo: 5000 },
+            wvgolf:        { name: "Volkswagen Golf",     online: 1750, office: 2300, depo: 5000 },
+            cupra:         { name: "Seat Leon Cupra",     online: 1750, office: 2350, depo: 5000 },
+            a3:            { name: "Audi A3",             online: 1750, office: 2300, depo: 5000 },
+            bmw320:        { name: "BMW 3.20",            online: 2800, office: 3750, depo: 10000 },
+            bmw520:        { name: "BMW 5.20",            online: 3000, office: 3975, depo: 10000 },
+            c4kaktus:      { name: "Citroën C4 Kaktüs",   online: 1750, office: 2650, depo: 10000 },
+            caravelle:     { name: "Volkswagen Caravelle",online: 3250, office: 4080, depo: 5000 },
+            civic:         { name: "Honda Civic",         online: 1500, office: 2250, depo: 5000 },
+            corolla:       { name: "Toyota Corolla",      online: 1500, office: 2300, depo: 5000 },
+            fabia:         { name: "Skoda Fabia",         online: 1500, office: 2300, depo: 5000 },
+            fiategea:      { name: "Fiat Egea",           online: 1500, office: 2300, depo: 5000 },
+            fordfocus:     { name: "Ford Focus",          online: 1800, office: 2650, depo: 5000 },
+            fordpuma:      { name: "Ford Puma",           online: 1800, office: 2650, depo: 5000 },
+            hyundaii20:    { name: "Hyundai i20",         online: 1250, office: 2100, depo: 5000 },
+            megane:        { name: "Renault Megane",      online: 1500, office: 2350, depo: 5000 },
+            mercedese200:  { name: "Mercedes E 200",      online: 2850, office: 3800, depo: 10000 },
+            peugeot407:    { name: "Peugeot 407",         online: 1750, office: 2650, depo: 5000 },
+            proacecity:    { name: "Toyota Proace City",  online: 2000, office: 2850, depo: 5000 },
+            renaultclio:   { name: "Renault Clio",        online: 1500, office: 2350, depo: 5000 },
+            skodasuperb:   { name: "Skoda Superb",        online: 1750, office: 2650, depo: 5000 },
+            passat:        { name: "Volkswagen Passat",   online: 2000, office: 2850, depo: 5000 },
+            rangerover:    { name: "Range Rover",         online: 6000, office: 7750, depo: 10000 },
+            porschetaycan: { name: "Porsche Taycan",      online: 10000,office: 14000,depo: 15000 }
+        };
+
+        // Rezervasyon formu hesaplama ve WhatsApp yönlendirme
+        const rezForm = document.getElementById('rez-form');
+        const carSelect = document.getElementById('res-car');
+        const daysInput = document.getElementById('res-days');
+        const summaryDiv = document.getElementById('rez-summary');
+
+        rezForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const carId = carSelect.value;
+            const pickup = pickupSelect.value;
+            const dropoff = dropoffSelect.value;
+            const days = parseInt(daysInput.value, 10);
+
+            if (!carId || !carData[carId]) {
+                alert("Lütfen araç seçin.");
+                return;
+            }
+            if (!pickup || !dropoff) {
+                alert("Lütfen alış ve teslim illerini seçin.");
+                return;
+            }
+            if (!days || days <= 0) {
+                alert("Lütfen gün sayısını girin.");
+                return;
+            }
+
+            const info = carData[carId];
+            const rentalTotal = info.online * days;
+            const grandTotal = rentalTotal + info.depo;
+
+            summaryDiv.innerHTML = 
+                "<strong>" + info.name + "</strong><br>" +
+                "Alış: " + pickup + " • Teslim: " + dropoff + "<br>" +
+                "Gün: " + days + "<br>" +
+                "Online Günlük Fiyat: ₺" + info.online.toLocaleString('tr-TR') + "<br>" +
+                "Kira Toplamı: ₺" + rentalTotal.toLocaleString('tr-TR') + "<br>" +
+                "Depozito: ₺" + info.depo.toLocaleString('tr-TR') + "<br>" +
+                "<span class='grand-total'>Genel Toplam: ₺" + grandTotal.toLocaleString('tr-TR') + "</span>";
+
+            const message =
+                "Merhaba, rezervasyon talebim var.\n\n" +
+                "Araç: " + info.name + "\n" +
+                "Alış ili: " + pickup + "\n" +
+                "Teslim ili: " + dropoff + "\n" +
+                "Gün sayısı: " + days + "\n" +
+                "Online günlük fiyat: " + info.online + " TL\n" +
+                "Kira toplamı: " + rentalTotal + " TL\n" +
+                "Depozito: " + info.depo + " TL\n" +
+                "Genel toplam: " + grandTotal + " TL";
+
+            const waUrl = "https://wa.me/905546448275?text=" + encodeURIComponent(message);
+            window.open(waUrl, "_blank");
+        });
+
+        // Kartlardaki Hemen Ara ve WhatsApp butonları
+        document.querySelectorAll('.car-card').forEach(function(card) {
+            const carId = card.getAttribute('data-car-id');
+            const info = carData[carId];
+            const waBtn = card.querySelector('.wa-card');
+            const callBtn = card.querySelector('.call-card');
+
+            if (waBtn && info) {
+                waBtn.addEventListener('click', function() {
+                    const message =
+                        "Merhaba, " + info.name + " için araç kiralama hakkında bilgi almak istiyorum.\n" +
+                        "Online günlük fiyat: " + info.online + " TL\n" +
+                        "Depozito: " + info.depo + " TL";
+                    const waUrl = "https://wa.me/905546448275?text=" + encodeURIComponent(message);
+                    window.open(waUrl, "_blank");
+                });
+            }
+
+            if (callBtn) {
+                callBtn.addEventListener('click', function() {
+                    window.location.href = "tel:05546448275";
+                });
+            }
+        });
+    </script>
+</body>
+</html>
